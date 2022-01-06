@@ -13,7 +13,7 @@ def TopologicalSort(edges,n):
         for i in AdList[Node]:
             if i not in Visited:
                 TopSort(i,AdList,Visited,Stack)
-        Stack.append(Node)
+        Stack.insert(0,Node)
     for i in AdList.keys():
         if i not in Visited:
             TopSort(i,AdList,Visited,Stack)
